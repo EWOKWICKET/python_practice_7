@@ -1,1 +1,2 @@
-test data to read from file
+test data 
+to read from txt

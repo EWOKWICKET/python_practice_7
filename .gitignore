@@ -1,3 +1,4 @@
 Pipfile.lock
 .venv/
 outputs/
+.pytest_cache/

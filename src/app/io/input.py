@@ -9,20 +9,21 @@ def console_input():
     return input("Enter data: ")
 
 
-def built_in_input():
+def file_input(src):
     """
     input using built-in python features
     """
 
-    with open('./src/app/io/resources/inputs/input.txt', mode='r') as file:
+    with open(src, mode='r') as file:
         data = file.read()
         return data
 
 
-def pandas_input():
+def pandas_input(src):
     """
     input using pandas
     """
 
-    data = pd.read_csv('./src/app/io/resources/inputs/input.txt', sep='\n+', header=None)
-    return data.to_string(index=False, header=False)
+    data = pd.read_csv(src, header=None)
+    result = "\n".join(data[0].astype(str))
+    return result
